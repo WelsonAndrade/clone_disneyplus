@@ -1,0 +1,170 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: #333;
+    position: relative;
+}
+
+body::after {
+    content: '';
+    background: url('spider-man-fotofundo.jpg') center/cover no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4; 
+    z-index: -1; 
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('spider-man-fotofundo.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    display: inline-block;
+    background: #e50914;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: #b00710;
+}
+
+.about {
+    padding: 50px 20px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.gallery {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 20px; 
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; 
+    }
+
+    .hero p {
+        font-size: 1rem; 
+    }
+
+    .about h2, .gallery h2 {
+        font-size: 2rem; 
+    }
+
+    .container {
+        width: 95%; 
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .footer p {
+        font-size: 0.8rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 10px; 
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem; 
+    }
+
+    .about p {
+        font-size: 0.9rem; 
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .footer p {
+        font-size: 0.7rem; 
+    }
+}
